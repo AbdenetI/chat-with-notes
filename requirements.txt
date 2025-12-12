@@ -1,0 +1,17 @@
+# Essential packages for basic RAG functionality
+streamlit
+openai
+python-dotenv
+PyPDF2
+python-docx
+
+# Simple vector storage (no ChromaDB for now)
+faiss-cpu
+
+# Basic text processing
+langchain
+langchain-community
+pandas==2.0.3
+
+# Optional: For better text splitting
+sentence-transformers==2.2.2
