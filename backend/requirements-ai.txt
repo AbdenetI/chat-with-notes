@@ -1,0 +1,9 @@
+# AI and Document Processing Dependencies (Local AI - No API keys needed)
+transformers>=4.21.0
+torch>=1.12.0
+chromadb>=0.4.0
+pypdf2>=3.0.0
+python-docx>=0.8.11
+sentence-transformers>=2.2.0
+numpy>=1.24.0
+python-dotenv>=1.0.0

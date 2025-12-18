@@ -280,14 +280,14 @@ def main():
     """Main Streamlit application."""
     
     st.set_page_config(
-        page_title="📚 Chat with Your Notes (Gemini)",
-        page_icon="📚",
+        page_title="Chat with Your Notes",
+        page_icon="💬",
         layout="wide"
     )
     
     # Header
-    st.title("📚 Chat with Your Notes")
-    st.markdown("### 🤖 **Powered by Google Gemini API**")
+    st.title("Chat with Your Notes")
+    st.markdown("### **Powered by Google Gemini API**")
     
     # Check API key
     if not GEMINI_API_KEY:
@@ -298,16 +298,13 @@ def main():
         2. Add it to your `.env` file: `GEMINI_API_KEY=your_key_here`
         3. Restart the application
         
-        **Why Gemini?** 
-        - More generous free tier than OpenAI
-        - High-quality responses
-        - Better quota limits
+
         """)
         return
     
     # Sidebar for file management
     with st.sidebar:
-        st.header("📁 Document Management")
+        st.header("Document Management")
         
         # File upload
         uploaded_files = st.file_uploader(
@@ -372,7 +369,7 @@ def main():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.header("💬 Chat Interface")
+        st.header("Chat Interface")
         
         # Display chat history
         if st.session_state.chat_history:
@@ -456,7 +453,7 @@ def main():
             st.write("4. 🤖 **Get** AI-powered responses from Gemini")
     
     with col2:
-        st.header("📊 System Status")
+        st.header("System Status")
         
         # Document statistics
         if st.session_state.documents:
@@ -475,29 +472,25 @@ def main():
             st.metric("Total Size", "0 bytes")
             st.metric("Questions Asked", 0)
         
-        # API info
-        st.subheader("🤖 AI Model Info")
+        # API status
+        st.subheader("Model Status")
         if GEMINI_API_KEY:
-            st.write("✅ **Model:** Auto-detected Gemini")
-            st.write("✅ **Provider:** Google AI")
-            st.write("✅ **API Key:** Configured")
+            st.write("**Model:** Auto-detected Gemini")
+            st.write("**Provider:** Google AI")
+            st.write("**API Key:** Configured")
         else:
-            st.write("❌ **API Key:** Missing")
+            st.write("**API Key:** Missing")
         
-        st.subheader("🔧 Features")
-        st.write("✅ Document upload & processing")
-        st.write("✅ Text extraction (PDF, DOCX, TXT)")
-        st.write("✅ Content chunking")
-        st.write("✅ Keyword-based search")
-        st.write("✅ Real AI responses (Gemini)")
-        st.write("✅ Source citations")
-        st.write("✅ Chat history")
+        st.subheader("Features")
+        st.write("Document upload & processing")
+        st.write("Text extraction (PDF, DOCX, TXT)")
+        st.write("Content chunking")
+        st.write("Keyword-based search")
+        st.write("Real AI responses")
+        st.write("Source citations")
+        st.write("Chat history")
         
-        st.subheader("💰 Why Gemini?")
-        st.write("🆓 **Generous free tier**")
-        st.write("⚡ **Fast responses**")
-        st.write("🎯 **High quality answers**") 
-        st.write("💸 **Better quota limits**")
+
 
 if __name__ == "__main__":
     main()

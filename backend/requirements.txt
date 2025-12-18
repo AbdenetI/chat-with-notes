@@ -1,0 +1,55 @@
+# FastAPI Backend Requirements for RAG Chat-with-Notes
+# Enterprise-grade Python backend with AI/RAG capabilities
+
+# Core FastAPI dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# CORS and security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Database and storage
+sqlalchemy==2.0.23
+alembic==1.13.1
+
+# AI/ML and RAG dependencies
+langchain==0.1.0
+langchain-community==0.0.10
+langchain-google-genai==0.0.6
+google-generativeai==0.3.2
+chromadb==0.4.18
+sentence-transformers==2.2.2
+huggingface-hub==0.19.4
+
+# Document processing
+pypdf2==3.0.1
+python-docx==1.1.0
+openpyxl==3.1.2
+python-pptx==0.6.23
+markdown==3.5.1
+beautifulsoup4==4.12.2
+unstructured==0.11.8
+
+# Text processing and embeddings
+tiktoken==0.5.2
+openai==1.5.0
+numpy==1.24.4
+scipy==1.11.4
+
+# Utilities
+python-dotenv==1.0.0
+aiofiles==23.2.1
+httpx==0.25.2
+tenacity==8.2.3
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+
+# Production server
+gunicorn==21.2.0

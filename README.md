@@ -1,36 +1,50 @@
-# 📚 Chat with Your Notes - RAG Application
+# RAG Chat-with-Notes - Enterprise Architecture
 
-A powerful **Retrieval Augmented Generation (RAG)** system that lets you upload documents and have intelligent conversations with your content using AI. Built with LangChain, ChromaDB, OpenAI, and Streamlit.
+Modern AI-powered document chat application with **React frontend** and **FastAPI backend**.
 
+![React](https://img.shields.io/badge/React-18-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![LangChain](https://img.shields.io/badge/LangChain-Latest-green)
-![OpenAI](https://img.shields.io/badge/OpenAI-API-orange)
-![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Store-purple)
-![Streamlit](https://img.shields.io/badge/Streamlit-Web%20UI-red)
+![Tailwind](https://img.shields.io/badge/Tailwind-CSS-cyan)
+![Google Gemini](https://img.shields.io/badge/Google-Gemini-orange)
 
-## 🚀 Features
+## 🏗️ **Enterprise Architecture**
+
+```
+┌─────────────────┐    HTTP/REST API    ┌─────────────────┐
+│   React.js      │ ◄──────────────────► │   FastAPI       │
+│   Frontend      │                     │   Backend       │
+│                 │                     │                 │
+│ • Modern UI     │                     │ • RAG Engine    │
+│ • File Upload   │                     │ • Vector Store  │
+│ • Chat Interface│                     │ • AI/ML Models  │
+│ • Real-time UX  │                     │ • Document Proc │
+└─────────────────┘                     └─────────────────┘
+```
+
+## Features
 
 ### Core RAG Functionality
-- **📄 Multi-format Support**: Upload PDF, DOCX, and TXT files
-- **🔍 Intelligent Chunking**: Smart text splitting for optimal embedding
-- **🧠 Vector Search**: ChromaDB-powered similarity search
-- **💬 Contextual Chat**: AI answers based on your documents
-- **📊 Source Attribution**: See exactly which documents inform each answer
+- **Multi-format Support**: Upload PDF, DOCX, and TXT files
+- **Intelligent Chunking**: Smart text splitting for optimal embedding
+- **Vector Search**: ChromaDB-powered similarity search
+- **Contextual Chat**: AI answers based on your documents
+- **Source Attribution**: See exactly which documents inform each answer
 
 ### Advanced Features
-- **🔄 Conversation Memory**: Maintains context across chat sessions
-- **📝 Document Summaries**: Generate AI summaries of uploaded files
-- **🗂️ Document Management**: Upload, view, and delete documents easily
-- **📈 Usage Analytics**: Track tokens, costs, and performance metrics
-- **💾 Export Conversations**: Download chat history as JSON
+- **Conversation Memory**: Maintains context across chat sessions
+- **Document Summaries**: Generate AI summaries of uploaded files
+- **Document Management**: Upload, view, and delete documents easily
+- **Usage Analytics**: Track tokens, costs, and performance metrics
+- **Export Conversations**: Download chat history as JSON
 
 ### User Experience
-- **🎨 Modern UI**: Clean, responsive Streamlit interface
-- **⚡ Real-time Processing**: Live document processing with progress indicators
-- **📱 Mobile Friendly**: Responsive design works on all devices
-- **🔒 Privacy First**: All processing happens locally (except OpenAI API calls)
+- **Modern UI**: Clean, responsive Streamlit interface
+- **Real-time Processing**: Live document processing with progress indicators
+- **Mobile Friendly**: Responsive design works on all devices
+- **Privacy First**: All processing happens locally (except OpenAI API calls)
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|
@@ -41,13 +55,13 @@ A powerful **Retrieval Augmented Generation (RAG)** system that lets you upload 
 | **Web Interface** | Streamlit | Interactive user interface |
 | **Document Processing** | PyPDF2, python-docx | Multi-format document parsing |
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Python 3.8+** installed on your system
 - **OpenAI API Key** (get one at [platform.openai.com](https://platform.openai.com/api-keys))
 - **Git** (for cloning the repository)
 
-## 🚦 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -89,7 +103,7 @@ streamlit run streamlit_app.py
 ### 6. Open in Browser
 The application will open automatically at `http://localhost:8501`
 
-## 📖 How to Use
+## How to Use
 
 ### Step 1: Upload Documents
 1. Use the **sidebar file uploader** to select your documents
@@ -107,27 +121,27 @@ The application will open automatically at `http://localhost:8501`
 - **Delete individual documents** or clear everything
 - **Export conversation history** for later reference
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 chat-with-notes/
-├── 📁 src/                          # Core application modules
-│   ├── 📄 __init__.py               # Package initialization
-│   ├── 📄 config.py                 # Configuration settings
-│   ├── 📄 document_processor.py     # Document upload & processing
-│   ├── 📄 vector_store.py           # ChromaDB vector database
-│   ├── 📄 rag_engine.py             # RAG logic & LLM integration
-│   └── 📄 app.py                    # Main application class
-├── 📁 uploads/                      # Temporary file storage
-├── 📁 vector_db/                    # ChromaDB storage (auto-created)
-├── 📄 streamlit_app.py              # Streamlit web interface
-├── 📄 requirements.txt              # Python dependencies
-├── 📄 .env.example                  # Environment template
-├── 📄 .gitignore                    # Git ignore rules
-└── 📄 README.md                     # This file
+├── src/                          # Core application modules
+│   ├── __init__.py               # Package initialization
+│   ├── config.py                 # Configuration settings
+│   ├── document_processor.py     # Document upload & processing
+│   ├── vector_store.py           # ChromaDB vector database
+│   ├── rag_engine.py             # RAG logic & LLM integration
+│   └── app.py                    # Main application class
+├── uploads/                      # Temporary file storage
+├── vector_db/                    # ChromaDB storage (auto-created)
+├── streamlit_app.py              # Streamlit web interface
+├── requirements.txt              # Python dependencies
+├── .env.example                  # Environment template
+├── .gitignore                    # Git ignore rules
+└── README.md                     # This file
 ```
 
-## ⚙️ Configuration Options
+## Configuration Options
 
 Customize your application by editing the `.env` file:
 
@@ -148,7 +162,7 @@ SIMILARITY_THRESHOLD=0.7              # Minimum relevance score
 MAX_RETRIEVED_DOCS=4                 # Documents per query
 ```
 
-## 🔧 Advanced Usage
+## Advanced Usage
 
 ### Custom Document Processing
 ```python
@@ -177,7 +191,7 @@ result = app.upload_and_process_document(file, filename)
 answer = app.ask_question("What is the main topic?")
 ```
 
-## 🛡️ Security & Privacy
+## Security & Privacy
 
 - **Local Processing**: Documents are processed locally on your machine
 - **API Calls**: Only text chunks are sent to OpenAI for embeddings and generation
@@ -185,7 +199,7 @@ answer = app.ask_question("What is the main topic?")
 - **Environment Variables**: API keys are stored securely in `.env` files
 - **Git Safety**: Sensitive files are automatically excluded via `.gitignore`
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -224,7 +238,7 @@ rm -rf vector_db/
 - Reduce `MAX_TOKENS` for shorter responses
 - Set higher `SIMILARITY_THRESHOLD` to retrieve fewer chunks
 
-## 💡 Tips for Best Results
+## Tips for Best Results
 
 ### Document Preparation
 - **Clean Text**: Remove headers, footers, and unnecessary formatting
@@ -241,7 +255,7 @@ rm -rf vector_db/
 - **Export Important Chats**: Save valuable conversations
 - **Review Sources**: Check which documents inform answers
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how to get started:
 
@@ -268,11 +282,11 @@ black src/ streamlit_app.py
 flake8 src/ streamlit_app.py
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **[LangChain](https://langchain.com/)** for the RAG framework
 - **[ChromaDB](https://www.trychroma.com/)** for vector database
@@ -280,7 +294,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **[Streamlit](https://streamlit.io/)** for the web interface
 - **[Hugging Face](https://huggingface.co/)** for inspiration and community
 
-## 📞 Support
+## Support
 
 - **Documentation**: Check this README and inline code comments
 - **Issues**: [Open an issue](https://github.com/your-username/chat-with-notes/issues) on GitHub
@@ -289,9 +303,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🎯 What Makes This Project Special?
+## What Makes This Project Special?
 
-### 🏆 **Professional RAG Implementation**
+### **Professional RAG Implementation**
 This isn't just another chatbot wrapper. It's a complete, production-ready RAG system that demonstrates:
 
 - **Modern AI Architecture**: Proper separation of concerns with modular components
@@ -299,7 +313,7 @@ This isn't just another chatbot wrapper. It's a complete, production-ready RAG s
 - **Scalable Design**: Easy to extend with new document types or AI providers
 - **User-Centric**: Intuitive interface with real-time feedback and progress tracking
 
-### 💼 **Career-Ready Features**
+### **Career-Ready Features**
 Perfect for showcasing in interviews and portfolios:
 
 - **Full-Stack AI Application**: Frontend, backend, database, and AI integration
@@ -307,7 +321,7 @@ Perfect for showcasing in interviews and portfolios:
 - **Modern Tech Stack**: Uses the latest tools companies are adopting
 - **Documentation**: Comprehensive README and inline documentation
 
-### 🚀 **Ready to Deploy**
+### **Ready to Deploy**
 This application can be easily deployed to:
 
 - **Streamlit Cloud** (free hosting for Streamlit apps)
@@ -317,6 +331,6 @@ This application can be easily deployed to:
 
 ---
 
-**Built with ❤️ and cutting-edge AI technology**
+**Built with cutting-edge AI technology**
 
-*Happy chatting with your notes! 📚✨*
+*Happy chatting with your notes!*
