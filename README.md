@@ -328,9 +328,3 @@ This application can be easily deployed to:
 - **Heroku, Railway, or Render** (with minimal configuration)
 - **Docker containers** (add Dockerfile for containerization)
 - **Local enterprise** environments
-
----
-
-**Built with cutting-edge AI technology**
-
-*Happy chatting with your notes!*
